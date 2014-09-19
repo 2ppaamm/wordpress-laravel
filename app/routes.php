@@ -13,7 +13,7 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	return View::make('/index');
 });
 
 Route::get('mdshome', function(){
@@ -23,8 +23,19 @@ Route::get('mdshome', function(){
 Route::get('aboutpamela', function(){
     return View::make('aboutpamela');
 });
+
+Route::get('contact', function(){
+    return View::make('contact');
+});
+
 Route::get('mds', function(){
     return View::make('mds');
 });
 
+Route::get('featured', function(){
+    return View::make('featured');
+});
+
 Route::resource('wpposts','WppostsController');
+
+Route::resource('wpusers','WpusersController');

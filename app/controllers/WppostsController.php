@@ -1,6 +1,6 @@
 <?php
 
-class WppostsController extends \BaseController {
+class WppostsController extends BaseController {
 
 	/**
 	 * Display a listing of wpposts
@@ -9,7 +9,7 @@ class WppostsController extends \BaseController {
 	 */
 	public function index()
 	{
-		$wpposts = Wppost::all();
+		$wpposts = Wppost::orderBy('ID','DESC')->get();//all(); //where('post_status', '=','publish')->get();
 
 		return View::make('wpposts.index', compact('wpposts'));
 	}

@@ -1,4 +1,5 @@
-@include('header')
+<!-- start: header ---------->
+@include ('header')
 <section id="header" class="heading" style="background: url(img/img03.jpg);">
     <div class="container">
         <div class="row">
@@ -11,6 +12,7 @@
     <div class="overlay"></div>
 </section>
 <!-- end:header -->
+
 <!-- begin:content -->
 <section id="content">
     <div class="container">
@@ -24,7 +26,6 @@
                  @yield('content')
             </div>
             <!-- end:article -->
-        @include('sidebar')
         </div>
     </div>
 </section>
@@ -37,6 +38,3 @@
 <!-- end:partner -->
 
 @include('footer')
-
-</body>
-</html>
